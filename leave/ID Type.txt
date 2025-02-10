@@ -1,0 +1,23 @@
+	$remidpass = '';
+	$remidtype = '';
+	$remidnumber = '';
+	
+	$sql5 = "SELECT idno,idtyp FROM cusmaster with (nolock) where cusid = '$cusid'";
+	$res5 = sqlsrv_query($conn,$sql5);
+	$row5 = sqlsrv_fetch_array($res5,SQLSRV_FETCH_ASSOC);
+	$idtyp = trim($row5['idtyp']);
+	$idno = trim($row5['idno']);
+	if($idtyp == 'PPV' || $idtyp == 'PPR')
+	{	
+		$remidpass = $idno;	//REMITTER PASSPORT NUMBER
+	}
+	if($idtyp == 'OMN')
+	{
+		$remidtype = '3'; //REMITTER ID TYPE
+		$remidnumber = $idno; //REMITTER ID NUMBER
+	}	
+	if($idtyp == 'CRN')
+	{
+		$remidtype = '4'; //REMITTER ID TYPE
+		$remidnumber = $idno; //REMITTER ID NUMBER
+	}
