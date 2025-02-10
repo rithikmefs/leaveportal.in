@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #FFD699, #FFAD73 70%, #FFD699);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .header {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        color: black;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .form_container {
+        max-width: 320px;
+        width: 100%;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+	  
+	   .form_container img {
+        width: 50px;
+        height: auto;
+        
+      }
+	  
+      .form_container h2 {
+        font-size: 24px;
+        color: #0b0217;
+        margin-bottom: 20px;
+      }
+      .input_box {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        height: 40px;
+		
+      }
+      .input_box input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0 30px;
+        color: #333;
+        transition: all 0.2s ease;
+        border-bottom: 1.5px solid #aaaaaa;
+		font-size: 15px;
+      }
+      .input_box input:focus {
+        border-color: #7d2ae8;
+      }
+      .input_box i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #707070;
+      }
+      .input_box i.email,
+      .input_box i.password {
+        left: 0;
+      }
+      .input_box i.pw_hide {
+        right: 0;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .form_container .button {
+        background:linear-gradient(135deg, #FFA31C , #F87412 70%, #FFA31C);
+        margin-top: 30px;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+		transition: transform 0.3s ease;
+		font-size: 15px;
+      }
+	  
+	  .form_container .button:hover{
+	   transform: scale(1.1);
+	  }
+	  .report
+{
+	caret-color:transparent;
+}
+    </style>
+  </head>
+  <body class="report">
+    <!-- <div class="header">Mefs - Leave Portal</div> -->
+    <div class="form_container">
+      <img src="MEFS.png" alt="Mefs Logo" />
+      <h2>Login</h2>
+      <form action="#">
+        <div class="input_box">
+          <input type="text" placeholder="Enter username" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" placeholder="Enter password" required />
+          <i class="uil uil-lock password"></i>
+        </div>
+        <button class="button">Login Now</button>
+      </form>
+    </div>
+  </body>
+</html>
